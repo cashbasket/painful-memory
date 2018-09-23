@@ -1,0 +1,69 @@
+@keyframes flashRed {
+  0% { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  50% { box-shadow: 0 0 20px red; }
+  100% { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+}
+
+@keyframes flashGreen {
+  0% { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  50% { box-shadow: 0 0 20px #00d636; }
+  100% { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+}
+
+.flash-red {
+  animation: flashRed 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.flash-green {
+  animation: flashGreen 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* .container button {
+  background: #fff;
+  border: 1px solid #666;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 5px;
+  margin: 0 auto 20px auto;
+  transition: all .1s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} */
+
+.container button {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  margin: 0 auto 20px auto;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #6c757d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all .1s ease-in-out;
+}
+
+.container button:after {
+  content: "";
+  border-radius: 10px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: all .1s ease-in-out;
+}
+
+.container button:hover {
+  transform: scale(1.07);
+}
+
+.container button:hover::after {
+    opacity: 1;
+}
+
+.container button > img {
+  border-radius: 10px;
+}

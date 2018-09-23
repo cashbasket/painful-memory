@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Tile from './components/Tile/Tile.vue';
+import Tile from './components/Tile.vue';
 import './main.css';
 import imagesArray from './images.json';
 

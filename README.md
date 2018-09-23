@@ -1,6 +1,6 @@
 # Painful Memory
 
-A basic "memory" game built using [VueJS](https://www.vuejs.org) and [Bootstrap](https://getbootstrap.com). It features photos of people - and maybe non-people - in the process of getting hit in the face with inanimate objects.
+A basic "memory" game built using [Vue.js](https://www.vuejs.org) and [Bootstrap](https://getbootstrap.com). It features photos of people - and maybe non-people - in the process of getting hit in the face with inanimate objects.
 
 _Don't worry_; they're all fine now.
 
